@@ -7,23 +7,19 @@ def forward_chaining(facts):
         score = 0
         career = rule["career"]
 
-        # 1. Interesses do usuário
         for interest, weight in rule["interests"].items():
             if facts.has_fact(interest):
                 score += weight
 
-        # 2. Habilidades (nem todas precisam estar presentes)
         matched_skills = 0
         for skill, weight in rule["skills"].items():
             if facts.has_fact(skill):
                 score += weight
                 matched_skills += 1
 
-        # bônus se tiver pelo menos uma habilidade compatível
         if matched_skills > 0:
             score += 1
 
-        # 3. Popularidade da carreira
         score += rule["popularity"]
 
         if score > 0:
