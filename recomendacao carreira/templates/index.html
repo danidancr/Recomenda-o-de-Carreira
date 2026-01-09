@@ -15,21 +15,33 @@
         <input type="checkbox" name="interests" value="gosta_biologia"> Gosto de biologia<br>
         <input type="checkbox" name="interests" value="gosta_pessoas"> Gosto de ajudar pessoas<br>
         <input type="checkbox" name="interests" value="gosta_artes"> Gosto de artes<br>
-        <input type="checkbox" name="interests" value="criativo"> Sou criativo<br>
-        <input type="checkbox" name="interests" value="gosta_numeros"> Gosto de numeros<br>
-        <input type="checkbox" name="interests" value="gosta_financas"> Gosto de financas<br>
+        <input type="checkbox" name="interests" value="criativo"> gosto de desenhar<br>
+
+        <h3>Habilidades (opcional):</h3>
+        
+        <input type="checkbox" name="interests" value="logica"> Tenho boa lógica<br>
+        <input type="checkbox" name="interests" value="empatia"> Sou empático<br>
+        <input type="checkbox" name="interests" value="criatividade"> Sou criativo<br>
+        <input type="checkbox" name="interests" value="resolucao_problemas"> Gosto de resolver problemas<br>
+
 
         <br><br>
         <button type="submit">Recomendar</button>
     </form>
 
-    {% if recommendations %}
-        <h2>Carreiras recomendadas:</h2>
+        {% if recommendations %}
+        <h2>Carreira(s) recomendada(s):</h2>
+
+        {% set max_score = recommendations[0][1] %}
+
         <ul>
-            {% for career in recommendations %}
-                <li>{{ career }}</li>
+            {% for career, score in recommendations %}
+                {% if score == max_score %}
+                    <li>{{ career }}</li>
+                {% endif %}
             {% endfor %}
         </ul>
     {% endif %}
+
 </body>
 </html>
