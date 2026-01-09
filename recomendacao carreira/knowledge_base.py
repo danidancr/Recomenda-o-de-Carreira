@@ -1,7 +1,7 @@
 RULES = [
     {
-        "career": "Ciencia da Computacao",
-        "interests": {
+        "carreira": "Ciencia da Computacao",
+        "interreses": {
             "gosta_programacao": 3,
             "gosta_matematica": 2
         },
@@ -9,11 +9,11 @@ RULES = [
             "logica": 2,
             "resolucao_problemas": 2
         },
-        "popularity": 2
+        "popularidade": 2
     },
     {
-        "career": "Medicina (Saúde)",
-        "interests": {
+        "carreira": "Medicina (Saúde)",
+        "interreses": {
             "gosta_biologia": 3,
             "gosta_pessoas": 2
         },
@@ -21,11 +21,11 @@ RULES = [
             "empatia": 2,
             "responsabilidade": 2
         },
-        "popularity": 3
+        "popularidade": 3
     },
     {
-        "career": "Design Grafico",
-        "interests": {
+        "carreira": "Design Grafico",
+        "interreses": {
             "criativo": 3,
             "gosta_artes": 2
         },
@@ -33,6 +33,6 @@ RULES = [
             "criatividade": 3,
             "comunicacao_visual": 2
         },
-        "popularity": 2
+        "popularidade": 2
     }
 ]

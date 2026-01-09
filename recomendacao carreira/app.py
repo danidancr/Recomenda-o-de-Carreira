@@ -11,8 +11,7 @@ def index():
     if request.method == "POST":
         facts = Facts()
 
-        # Captura respostas do formulario
-        answers = request.form.getlist("interests")
+        answers = request.form.getlist("interreses")
 
         for answer in answers:
             facts.add_fact(answer)

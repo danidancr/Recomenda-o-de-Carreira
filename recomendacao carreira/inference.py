@@ -5,9 +5,9 @@ def forward_chaining(facts):
 
     for rule in RULES:
         score = 0
-        career = rule["career"]
+        carreira = rule["carreira"]
 
-        for interest, weight in rule["interests"].items():
+        for interest, weight in rule["interreses"].items():
             if facts.has_fact(interest):
                 score += weight
 
@@ -20,9 +20,9 @@ def forward_chaining(facts):
         if matched_skills > 0:
             score += 1
 
-        score += rule["popularity"]
+        score += rule["popularidade"]
 
         if score > 0:
-            scores[career] = score
+            scores[carreira] = score
 
     return sorted(scores.items(), key=lambda x: x[1], reverse=True)

@@ -7,3 +7,4 @@ class Facts:
 
     def has_fact(self, fact):
         return fact in self.facts
+
